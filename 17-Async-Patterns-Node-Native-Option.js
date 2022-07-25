@@ -25,13 +25,9 @@ getText('./content/subfolder/first.txt')
 
 const start = async () =>{
   try {
-    const first  = await readFile('./content/subfolder/first.txt', 'utf8');
-    const second  = await readFile('./content/subfolder/second.txt', 'utf8');
-    await writeFile(
-  './content/result-mind-granade.txt',
-  `THIS I AWESOME: ${first} ${second}`,
-  { flag: 'a'}
-)
+    const first  = await readFile('./content/subfolder/first.txt', 'utf8')
+    const second  = await readFile('./content/subfolder/second.txt', 'utf8')
+    await writeFile('./content/result-mind-granade.txt', `THIS I AWESOME: ${first} ${second}`, { flag: 'a'})
       console.log(first, second)
   } catch (error){
     console.log(error)
